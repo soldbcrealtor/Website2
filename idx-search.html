@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Search MLS® Listings | Gary Ahuja PREC.</title>
+  <meta name="description" content="Search homes and real estate listings in Nanaimo and Central Vancouver Island with Gary Ahuja PREC." />
+  <meta name="theme-color" content="#050e3d" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="idx.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Gary Ahuja home">
+        <img src="assets/logo.png" alt="Real brokerage logo" />
+        <span>Gary Ahuja <strong>PREC.</strong></span>
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a class="active" href="idx-search.html">Search MLS®</a>
+        <a href="index.html#valuation">Valuation</a>
+        <a href="index.html#contact">Contact</a>
+        <a class="call" href="tel:12503294001">250-329-4001</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="idx-hero">
+      <div class="container">
+        <p class="eyebrow">Nanaimo & Central Vancouver Island</p>
+        <h1>Search MLS® listings</h1>
+        <p>Browse current homes, condos, land and investment properties. Save favourites and request private showings after your approved IDX/DDF provider is connected.</p>
+      </div>
+    </section>
+
+    <section class="idx-shell container" aria-label="Property search">
+      <div id="idx-root" class="idx-root" data-provider="pending">
+        <div class="idx-loading" id="idx-loading">
+          <div class="idx-spinner" aria-hidden="true"></div>
+          <h2>MLS® search integration ready</h2>
+          <p>This page is built to accept an approved IDX/DDF provider embed. Add the provider URL or script in <code>idx-config.js</code>.</p>
+          <div class="idx-actions">
+            <a class="btn primary" href="#property-search-request">Ask Gary for listings</a>
+            <a class="btn outline-dark" href="tel:12503294001">Call 250-329-4001</a>
+          </div>
+        </div>
+      </div>
+      <noscript><p class="idx-notice">JavaScript is required for the MLS® search tool.</p></noscript>
+    </section>
+
+    <section class="section container idx-benefits">
+      <div class="section-head">
+        <p class="eyebrow">Personalized Search</p>
+        <h2>Tell Gary what you are looking for.</h2>
+        <p>Receive a curated list with new matches, price changes and properties that fit your goals.</p>
+      </div>
+      <form class="idx-lead-form ajax-contact-form" id="property-search-request" data-form-name="Property Search Request">
+        <input type="hidden" name="_subject" value="New Website Property Search Request">
+        <input type="text" name="_honey" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <label><span>Name</span><input required name="name" autocomplete="name"></label>
+        <label><span>Email</span><input required type="email" name="email" autocomplete="email"></label>
+        <label><span>Phone</span><input name="phone" autocomplete="tel"></label>
+        <label><span>Preferred area</span><input name="area" placeholder="Nanaimo, Ladysmith, Parksville..."></label>
+        <label><span>Price range</span><input name="price" placeholder="$600,000–$900,000"></label>
+        <label><span>Property type</span><select name="type"><option>House</option><option>Condo</option><option>Townhome</option><option>Land</option><option>Commercial</option><option>Investment</option></select></label>
+        <label class="full"><span>Must-haves</span><textarea name="criteria" rows="4" placeholder="Bedrooms, bathrooms, garage, acreage, rental suite..."></textarea></label>
+        <button class="btn primary full" type="submit">Create My Property Search</button>
+        <p class="form-status full" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container footer-grid">
+      <div><img class="footer-logo" src="assets/logo.png" alt="Real logo"><h2>Gary Ahuja PREC.</h2><p>Residential • Commercial • Pre-Sale • Investment Real Estate</p></div>
+      <div><h3>Contact</h3><p><a href="tel:12503294001">250-329-4001</a><br><a href="mailto:soldbc@outlook.com">soldbc@outlook.com</a></p></div>
+      <div><h3>Based in</h3><p>Nanaimo, British Columbia<br>Serving Central Vancouver Island</p></div>
+    </div>
+    <div class="container fineprint">© <span id="year"></span> Gary Ahuja PREC. MLS®, REALTOR® and associated trademarks are owned or controlled by The Canadian Real Estate Association and used under licence.</div>
+  </footer>
+  <script src="idx-config.js"></script>
+  <script src="idx-loader.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
